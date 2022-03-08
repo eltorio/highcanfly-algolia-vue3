@@ -10,6 +10,19 @@ It contains a AlgoliaSearch.vue wich can be simply imported in a Vue3 / Tailwind
 ```
 ```javascript
 import AlgoliaSearch from "@/components/AlgoliaSearch";
+```  
+It needs some dependecies:  
+```json
+  "dependencies": {
+    "vue": "^3.2.31",
+    "vue-instantsearch": "4.3.3",
+    "@fortawesome/fontawesome-free": "~6.0.0"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.23",
+    "vue-template-compiler": "^2.6.14"
+  },
 ```
 my base template @CodeSandbox https://codesandbox.io/s/vue-3-2-31-tailwindcss-3-0-23-fontawesome-6template-i8o5t6  
 
