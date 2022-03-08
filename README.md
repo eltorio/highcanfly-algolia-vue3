@@ -1,11 +1,12 @@
 # highcanfly-algolia-vue3
-This is a test Vue3 site tested in CodeSandbox at https://5ei083.csb.app/  
+This is a test Vue3 site tested in CodeSandbox at https://codesandbox.io/s/github/eltorio/highcanfly-algolia-vue3  
 It is developped for our main website https://www.highcanfly.club  
 It contains a AlgoliaSearch.vue wich can be simply imported in a Vue3 / Tailwindcss 3 / Font Awesome 6 site
 ```vue
     <algolia-search
       applicationId="ABJE27440A"
       searchKey="75cf07531eff71f751166e64704bacd6"
+      filter="type:post"
     />
 ```
 ```javascript
