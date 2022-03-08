@@ -4,7 +4,7 @@
       index-name="highcanfly-development-index"
       :search-client="searchClient"
     >
-      <ais-search-box :class-names="{'ais-SearchBox-input': 'p-2 text-slate-600'}" placeholder="rechercher…">
+      <ais-search-box placeholder="rechercher…">
         <template v-slot:submit-icon
           ><i class="fa-solid fa-magnifying-glass"></i
         ></template>
@@ -44,15 +44,19 @@ import {
 export default {
   name: "AlgoliaSearch",
   props: {
-    filter: String,
     applicationId: String,
     searchKey: String,
+    filter: {
+      type: [String],
+      default: "",
+    },
   },
   data() {
     const algoliaClient = algoliasearch(
       this.$props.applicationId,
       this.$props.searchKey
     );
+    const filter = this.$props.filter;
     const searchClient = {
       ...algoliaClient,
       search(requests) {
@@ -67,7 +71,9 @@ export default {
             })),
           });
         }
-
+        requests.forEach((request) => {
+          request.params.filters = filter;
+        });
         return algoliaClient.search(requests);
       },
     };
