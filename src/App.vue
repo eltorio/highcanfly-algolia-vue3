@@ -12,6 +12,7 @@
     <algolia-search
       applicationId="FBJQ44A01A"
       searchKey="a2a5298ced7dcf728fd1125d97676913"
+      filter="type:post"
     />
     <basic-card :msg="`Hello Vue ${app.version} in CodeSandbox!`" />
   </div>
