@@ -4,7 +4,7 @@
       index-name="highcanfly-development-index"
       :search-client="searchClient"
     >
-      <ais-search-box placeholder="rechercher…">
+      <ais-search-box :class-names="{'ais-SearchBox-input': 'p-2 text-slate-600'}" placeholder="rechercher…">
         <template v-slot:submit-icon
           ><i class="fa-solid fa-magnifying-glass"></i
         ></template>
